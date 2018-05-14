@@ -9,6 +9,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class BombingPage {
   items:Bomb[] = [];
+  makeItHidden:boolean = false;
   constructor(public navCtrl: NavController,
     public navParams:NavParams,
     public alertCtrl: AlertController) {
@@ -37,8 +38,8 @@ return [randomX,randomY];
 
 
   onClickBomb($event) {
-    let clickedId:number = $event.target.id;
-    if(this.items[clickedId].explode === true) {
+    console.log($event.target.id);
+    if(this.items[$event.target.id].explode === true) {
       console.log("This is the bomb!");
       let alert = this.alertCtrl.create({
       title: 'You Loose!',
@@ -47,7 +48,7 @@ return [randomX,randomY];
     });
     alert.present();
     }
-    this.items.splice(clickedId,1);
+    document.getElementById($event.target.id).style.display="none";
 
      if(this.items.length < 1) {
 

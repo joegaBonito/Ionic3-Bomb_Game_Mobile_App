@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams} from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { BombingPage } from '../bombingPage/bombingPage';
 import { Bomb } from '../models/bomb';
 import { AlertController } from 'ionic-angular';
@@ -62,17 +62,9 @@ export class HomePage {
       });
     alert.present();
   } else if(this.items.length > 0 && this.numOfBomb > 0){
-  var temp:number;
   var i = 0;
   while(i < this.numOfBomb) {
-    var ranNum:number = Math.floor(Math.random() * this.items.length) + 0;
-    if(ranNum == temp) {
-      while(ranNum != temp) {
-        ranNum = Math.floor(Math.random() * this.items.length) + 0;
-      }
-    }
-    temp = ranNum;
-    this.items[ranNum].explode = true;
+    this.items[i].explode = true;
     i++;
   }
   this.navCtrl.push(BombingPage, {

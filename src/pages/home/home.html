@@ -8,25 +8,26 @@
 
 <ion-content padding>
   <div class="row">
-    <div class="number"># of Players: {{items.length}}</div>
+    <div class="number">Select # of Players: {{items.length}}</div>
   </div>
+  <div class="row clearfix">&nbsp;</div>
   <div class="row">
     <div class="button"><button (click)="addPlayer()" ion-button>Add a Player</button></div>
-</div>
-<div class="row">
     <div class="button"><button (click)="subtractPlayer()" ion-button color="danger">Subtract a Player</button></div>
 </div>
 <div class="row clearfix">&nbsp;</div>
+<div class="hr"></div>
 <div class="row">
-  <div class="number"># of Bombs: {{numOfBomb}}</div>
+  <div class="number">Select # of Bombs: {{numOfBomb}}</div>
 </div>
+<div class="row clearfix">&nbsp;</div>
 <div class="row">
   <div class="button"><button (click)="addBomb()" ion-button>Add a Bomb</button></div>
-</div>
-<div class="row">
   <div class="button"><button (click)="subtractBomb()" ion-button color="danger">Subtract a Bomb</button></div>
 </div>
 <div class="row clearfix">&nbsp;</div>
+<div class="row clearfix">&nbsp;</div>
+<div class="hr"></div>
 <div class="row">
     <div class="button"><button (click)="nextPage()" ion-button color="dark">Start Bombing</button></div>
   </div>

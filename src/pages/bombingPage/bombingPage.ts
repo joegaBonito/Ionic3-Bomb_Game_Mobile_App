@@ -29,7 +29,7 @@ export class BombingPage {
   }
 
  getRandomPosition(element) {
-var x = document.body.offsetHeight-element.clientHeight;
+var x = document.body.offsetHeight-element.clientHeight-80;
 var y = document.body.offsetWidth-element.clientWidth;
 var randomX = Math.floor(Math.random()*x);
 var randomY = Math.floor(Math.random()*y);
@@ -42,7 +42,7 @@ return [randomX,randomY];
     if(this.items[$event.target.id].explode === true) {
       console.log("This is the bomb!");
       let alert = this.alertCtrl.create({
-      title: 'You Loose!',
+      title: 'You Lose!',
       subTitle: 'Thank you for the coffee :)',
       buttons: ['OK']
     });

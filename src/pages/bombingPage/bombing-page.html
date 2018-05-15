@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      JBOMB
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <div class="imagebomb" *ngFor="let item of items; let i = index">
-    <img id={{i}} (click)="onClickBomb($event)" src="assets/imgs/bomb_PNG40.png"/>
+    <img id={{i}} class="bombimage" (click)="onClickBomb($event)" src="assets/imgs/bomb_PNG40.png"/>
   </div>
 </ion-content>

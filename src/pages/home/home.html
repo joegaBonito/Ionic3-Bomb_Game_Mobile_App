@@ -1,29 +1,29 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      BOMB App
+      JBOMB
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <div class="row">
-    <div class="number">Select # of Players: {{items.length}}</div>
+    <div class="number">Select # of Player(s): {{items.length}}</div>
   </div>
   <div class="row clearfix">&nbsp;</div>
   <div class="row">
-    <div class="button"><button (click)="addPlayer()" ion-button>Add a Player</button></div>
-    <div class="button"><button (click)="subtractPlayer()" ion-button color="danger">Subtract a Player</button></div>
+    <div class="button"><button (click)="addPlayer()" ion-button>+Player</button></div>
+    <div class="button"><button (click)="subtractPlayer()" ion-button color="danger">-Player</button></div>
 </div>
 <div class="row clearfix">&nbsp;</div>
 <div class="hr"></div>
 <div class="row">
-  <div class="number">Select # of Bombs: {{numOfBomb}}</div>
+  <div class="number">Select # of Bomb(s): {{numOfBomb}}</div>
 </div>
 <div class="row clearfix">&nbsp;</div>
 <div class="row">
-  <div class="button"><button (click)="addBomb()" ion-button>Add a Bomb</button></div>
-  <div class="button"><button (click)="subtractBomb()" ion-button color="danger">Subtract a Bomb</button></div>
+  <div class="button"><button (click)="addBomb()" ion-button>+Bomb</button></div>
+  <div class="button"><button (click)="subtractBomb()" ion-button color="danger">-Bomb</button></div>
 </div>
 <div class="row clearfix">&nbsp;</div>
 <div class="row clearfix">&nbsp;</div>

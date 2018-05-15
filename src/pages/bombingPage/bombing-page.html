@@ -8,6 +8,6 @@
 
 <ion-content padding>
   <div class="imagebomb" *ngFor="let item of items; let i = index">
-    <img id={{i}} (click)="onClickBomb($event)" src={{item.imagePath}} />
+    <div id={{i}} class="bombimage" (click)="onClickBomb($event)" ></div>
   </div>
 </ion-content>
